@@ -6,6 +6,8 @@ Include without polluting the global namespace.
 namespace A::B do
   C.foo   # => A::B::C.foo
 end
+
+C.foo # ❌ not accessible outside block!
 ```
 
 ## Installation
