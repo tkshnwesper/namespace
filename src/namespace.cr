@@ -1,6 +1,6 @@
 macro namespace(ns, file = __FILE__, line = __LINE__, &block)
   {% ns_module_name = "Namespace_#{ns}".id %}
-  {% run_method_name = "run_#{file.split('/')[-1].gsub(/[^a-zA-Z0-9_]/, "_").id}#{line}".id %}
+  {% run_method_name = "run_#{file.gsub(/[^a-zA-Z0-9_]/, "_").id}#{line}".id %}
   module {{ ns_module_name }}
     extend self
     include {{ns}}
